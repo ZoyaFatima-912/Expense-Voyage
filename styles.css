@@ -1,0 +1,580 @@
+/* ADD EXPENSE CSS */
+
+:root {
+    --deep-ocean: #023047;
+    --golden-sand: #F4A261;
+    --sunset-coral: #E76F51;
+    --sky-white: #FAFAFA;
+    --sea-mist: #E5E5E5;
+}
+
+body {
+    background-color: var(--sea-mist);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--deep-ocean);
+}
+
+.addexpense-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.addexpense-card {
+    background: var(--sky-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.addexpense-card-header {
+    background-color: var(--deep-ocean);
+    color: var(--sky-white);
+    padding: 16px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.addexpense-card-header i {
+    margin-right: 8px;
+    color: var(--golden-sand);
+}
+
+.addexpense-card-body {
+    padding: 30px 40px;
+}
+
+.addexpense-alert-error {
+    background-color: var(--sunset-coral);
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.addexpense-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.addexpense-form-group.notes-field {
+    grid-column: 1 / -1;
+}
+
+.addexpense-form-group.notes-field textarea {
+    width: 100%;
+    min-height: 200px;
+}
+
+
+.addexpense-form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.addexpense-input-group {
+    display: flex;
+}
+
+.addexpense-input-prefix {
+    background-color: var(--golden-sand);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px 0 0 6px;
+    font-weight: 500;
+}
+
+.addexpense-input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--sea-mist);
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+}
+
+.addexpense-form-group input,
+.addexpense-form-group select,
+.addexpense-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--sea-mist);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.addexpense-form-group input:focus,
+.addexpense-form-group select:focus,
+.addexpense-form-group textarea:focus {
+    border-color: var(--golden-sand);
+}
+
+.addexpense-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    grid-column: span 2;
+}
+
+.addexpense-btn-primary,
+.addexpense-btn-secondary {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex: unset;
+    min-width: 120px;
+}
+
+.addexpense-btn-primary {
+    background-color: var(--golden-sand);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.addexpense-btn-primary:hover {
+    background-color: var(--sunset-coral);
+}
+
+.addexpense-btn-secondary {
+    background-color: transparent;
+    color: var(--deep-ocean);
+    border: 1px solid var(--deep-ocean);
+    text-decoration: none;
+}
+
+.addexpense-btn-secondary:hover {
+    background-color: var(--sea-mist);
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .addexpense-card-body {
+        padding: 20px;
+    }
+
+    .addexpense-form {
+        grid-template-columns: 1fr;
+        /* stack form fields */
+    }
+
+    .addexpense-btn-group {
+        grid-column: span 1;
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .addexpense-container {
+        padding: 20px 10px;
+    }
+
+    .addexpense-card-header {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+
+    .addexpense-card-body {
+        padding: 15px;
+    }
+
+    .addexpense-btn-primary,
+    .addexpense-btn-secondary {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        min-width: 100px;
+    }
+
+    .addexpense-btn-group {
+        flex-wrap: wrap;
+    }
+}
+
+/* ADD EXPENSE CSS ENDED */
+
+/* ADD TRIP CSS */
+
+:root {
+    --deep-ocean: #023047;
+    --golden-sand: #F4A261;
+    --sunset-coral: #E76F51;
+    --sky-white: #FAFAFA;
+    --sea-mist: #E5E5E5;
+}
+
+.addtrip-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.addtrip-card {
+    background: var(--sky-white);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 750px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.addtrip-header {
+    background: var(--deep-ocean);
+    color: var(--sky-white);
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.addtrip-header h4 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.addtrip-body {
+    padding: 20px;
+}
+
+.addtrip-error {
+    background: var(--sunset-coral);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.addtrip-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--deep-ocean);
+}
+
+.addtrip-field {
+    margin-bottom: 15px;
+}
+
+.addtrip-field input,
+.addtrip-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--sea-mist);
+    border-radius: 5px;
+}
+
+.addtrip-inputgroup {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--sea-mist);
+    border-radius: 5px;
+}
+
+.addtrip-inputgroup span {
+    background: var(--golden-sand);
+    padding: 10px 15px;
+    border-radius: 5px 0 0 5px;
+    color: var(--deep-ocean);
+    font-weight: bold;
+}
+
+.addtrip-inputgroup input {
+    border: none;
+    flex: 1;
+    padding: 10px;
+}
+
+.addtrip-row {
+    display: flex;
+    gap: 15px;
+}
+
+.addtrip-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.addtrip-btn-primary {
+    background: var(--golden-sand);
+    color: var(--deep-ocean);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+}
+
+.addtrip-btn-primary:hover {
+    background: var(--sunset-coral);
+    color: var(--sky-white);
+}
+
+.addtrip-btn-secondary {
+    background: transparent;
+    border: 2px solid var(--golden-sand);
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--golden-sand);
+    font-weight: bold;
+    flex: 1;
+}
+
+.addtrip-btn-secondary:hover {
+    background: var(--golden-sand);
+    color: var(--deep-ocean);
+}
+
+/* ADD TRIP CSS RESPONSIVENESS */
+
+/* Mobile-first responsiveness */
+.addtrip-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.addtrip-card {
+    width: 100%;
+    max-width: 750px;
+    border-radius: 8px;
+    background: var(--sky-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Let the date fields stack on small screens */
+.addtrip-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.addtrip-field {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Buttons responsive */
+.addtrip-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.addtrip-btn-primary,
+.addtrip-btn-secondary {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* Breakpoint for tablets & below */
+@media (max-width: 768px) {
+    .addtrip-card {
+        padding: 0;
+        /* keep it compact */
+    }
+
+    .addtrip-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .addtrip-body {
+        padding: 15px;
+    }
+}
+
+/* Breakpoint for mobile phones */
+@media (max-width: 480px) {
+    .addtrip-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .addtrip-actions {
+        flex-direction: column;
+    }
+
+    .addtrip-btn-primary,
+    .addtrip-btn-secondary {
+        width: 100%;
+    }
+}
+
+/* ADD TRIP CSS RESPONSIVENESS */
+
+/* ADD TRIP CSS ENDED */
+
+/* EXPENSE CSS */
+
+:root {
+    --deep-ocean: #023047;
+    --golden-sand: #F4A261;
+    --sunset-coral: #E76F51;
+    --sky-white: #FAFAFA;
+    --sea-mist: #E5E5E5;
+}
+
+body {
+    background-color: var(--sky-white);
+    font-family: 'Poppins', sans-serif;
+    color: var(--deep-ocean);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+/* Table Styling */
+.expense-table {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    min-width: 600px;
+    /* Keeps table readable */
+}
+
+.expense-table thead {
+    background-color: var(--deep-ocean);
+    color: white;
+}
+
+.expense-table th,
+.expense-table td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.expense-table tbody tr:hover {
+    background-color: var(--sea-mist);
+    transition: background 0.2s ease;
+}
+
+/* Category Badge */
+.expense-category {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    background-color: var(--golden-sand);
+    color: white;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--deep-ocean);
+    border-color: var(--deep-ocean);
+}
+
+.btn-primary:hover {
+    background-color: var(--sunset-coral);
+    border-color: var(--sunset-coral);
+}
+
+.btn-outline-danger {
+    border-color: var(--sunset-coral);
+    color: var(--sunset-coral);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--sunset-coral);
+    color: white;
+}
+
+.btn-outline-secondary {
+    border-color: var(--golden-sand);
+    color: var(--golden-sand);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--golden-sand);
+    color: white;
+}
+
+/* Empty State */
+.no-expense {
+    color: var(--deep-ocean);
+    font-weight: 500;
+}
+
+.no-expense-icon {
+    color: var(--sea-mist);
+}
+
+/* Alerts */
+.alert-success {
+    background-color: var(--golden-sand);
+    border: none;
+    color: white;
+}
+
+.alert-danger {
+    background-color: var(--sunset-coral);
+    border: none;
+    color: white;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 992px) {
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .expense-table th,
+    .expense-table td {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .expense-category {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* Stack action buttons */
+    .d-flex.gap-2 {
+        flex-direction: column;
+    }
+}
+
+/* EXPENSE CSS ENDED */
+
+/* NAVBAR */

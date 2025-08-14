@@ -1,0 +1,78 @@
+/* ===== THEME COLORS ===== */
+:root {
+    --deep-ocean: #023047;
+    --golden-sand: #F4A261;
+    --sunset-coral: #E76F51;
+    --sky-white: #FAFAFA;
+    --sea-mist: #E5E5E5;
+}
+
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: 'Lora', serif;
+    background: linear-gradient(rgba(2, 48, 71, 0.85), rgba(2, 48, 71, 0.85)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== LOGIN FORM CONTAINER ===== */
+.login-form {
+    background: var(--sky-white);
+    border: none;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+}
+
+/* ===== IMAGE ===== */
+.bon-voyage-img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+/* ===== INPUTS ===== */
+.login-form-input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--sea-mist);
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+.login-form-input:focus {
+    border-color: var(--golden-sand);
+    box-shadow: 0 0 5px rgba(244, 162, 97, 0.5);
+}
+
+/* ===== BUTTON ===== */
+.login-button {
+    background: #FF8A65;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    border: none;
+}
+
+.login-button:hover {
+    background: var(--sunset-coral);
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--deep-ocean);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    color: var(--sunset-coral);
+}
