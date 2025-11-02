@@ -261,8 +261,8 @@ if (empty($user['profile_pic']) || $user['profile_pic'] === 'profile-pic') {
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <div class="card shadow-sm">
-                    <div class="card-header text-white">
-                        <h4 class="mb-0"><i class="fa-solid fa-user-pen me-2"></i>Edit Profile</h4>
+                    <div class="card-header text-white" style="background-color: #023047;">
+                        <h4 class="mb-0"><i class="fa-solid fa-user-pen me-2" ></i>Edit Profile</h4>
                     </div>
                     <div class="card-body">
                         <?php if ($success_msg): ?>

@@ -79,11 +79,26 @@
             color: var(--sky-white);
             transform: scale(1.05);
         }
+
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: var(--golden-sand);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .login-link:hover {
+            color: var(--sunset-coral);
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
-    <div class="register-form">
+    <div class="register-form my-4">
         <!-- Bon Voyage logo -->
         <div class="text-center mb-3">
             <img src="./Assets/Bon-voyage.png" alt="Bon Voyage" class="bon-voyage-img">
@@ -112,7 +127,7 @@
             </div>
             <div class="mb-3">
                 <select id="currency" class="form-control" name="currency" required>
-                    <option value="">Preferred Currency</option>
+                    <option value="" selected hidden>Preferred Currency</option>
                     <?php
                     if (isset($_SESSION['signup_currency']) && $_SESSION['signup_currency'] === 'USD') {
                         echo '<option value="USD" selected>USD</option><option value="EUR">EUR</option><option value="PKR">PKR</option>';
@@ -144,6 +159,9 @@
                 ?>
             </div>
         </form>
+
+        <!-- Login link -->
+        <a href="login.php" class="login-link">Already have an account? Login here</a>
     </div>
 </body>
 

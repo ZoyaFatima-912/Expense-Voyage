@@ -84,6 +84,29 @@ if (session_status() === PHP_SESSION_NONE) {
     background-color: var(--golden-sand);
     mask: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") no-repeat center / contain;
 }
+/* Fix dropdown visibility */
+.navbar {
+  position: relative;
+  z-index: 1050;
+}
+
+.dropdown-menu {
+  z-index: 2000 !important;
+}
+
+/* Make sure containers don't clip dropdowns */
+.container,
+.container-fluid {
+  overflow: visible !important;
+}
+
+/* Optional: ensure dropdown aligns properly on the right */
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
+
 
     </style>
 </head>
@@ -119,7 +142,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'expenses.php' ? 'active' : ''; ?>" href="expenses.php">
+                    <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'expenses.php' ? 'active' : ''; ?>" href="expense.php">
                         <i class="fas fa-receipt me-1"></i> Expenses
                     </a>
                 </li>
@@ -134,7 +157,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <ul class="navbar-nav">
                 <?php if (isset($_SESSION['email'])): ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link" href="profile.php">
                             <i class="fas fa-user-circle me-1"></i>
                             <?php
                             $conn = mysqli_connect('localhost', 'root', '', 'expense_voyage');
@@ -148,11 +171,11 @@ if (session_status() === PHP_SESSION_NONE) {
                             }
                             ?>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        <!-- <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user me-1"></i> Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt me-1"></i> Logout</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
